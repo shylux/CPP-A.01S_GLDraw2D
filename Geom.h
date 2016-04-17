@@ -12,18 +12,36 @@ public:
     float x;
     float y;
 
+    CPoint() {};
     CPoint(float x, float y);
     void set(float x, float y);
-    void list();
+    void print();
 };
 
 class CLine {
 public:
     CPoint p1, p2;
 
+    CLine(CPoint *pPoint, CPoint *pCPoint);
     void set(CPoint* p1, CPoint* p2);
-    void list();
+    void print();
 };
 
-class CRectangle;
-class CCircle;
+class CRectangle {
+public:
+    CPoint p1, p2;
+
+    CRectangle(CPoint *pPoint, CPoint *pCPoint);
+    void set(CPoint* p1, CPoint* p2);
+    void print();
+};
+
+class CCircle {
+public:
+    CPoint point;
+    float radius;
+
+    CCircle(CPoint *p, float rad);
+    void set(CPoint* p, float rad);
+    void print();
+};
